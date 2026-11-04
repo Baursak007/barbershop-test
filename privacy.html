@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика конфиденциальности</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { padding-bottom: 0; }
+    .doc { max-width: 760px; padding: 40px var(--gutter) 64px; margin: 0 auto; }
+    .doc h1 { font-size: clamp(26px, 6vw, 36px); color: var(--spruce); }
+    .doc h2 { font-size: 20px; margin-top: 32px; color: var(--spruce); }
+    .doc p, .doc li { margin-top: 10px; font-size: 17px; }
+    .doc ul { list-style: disc; padding-left: 22px; }
+    .doc .draft { margin-top: 20px; padding: 12px 14px; background: #ffe9a8; color: #3a2d00; border-radius: 6px; font-size: 15px; }
+    .doc .back { display: inline-block; margin-top: 28px; font-weight: 600; color: var(--teal); }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html" aria-label="На главную">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M32 12c-5-4-18-4-18 10 0 7 3 10 4 17 1 7 2 13 6 13s4-9 8-9 4 9 8 9 5-6 6-13c1-7 4-10 4-17C50 8 37 8 32 12z"/></svg>
+      <span class="logo-name" id="p-brand"></span>
+    </a>
+  </div>
+</header>
+
+<main class="doc">
+  <h1>Политика конфиденциальности</h1>
+
+  <p class="draft" id="p-draft" hidden>Это шаблон. Перед публикацией его должен прочитать и при необходимости исправить юрист клиники с учётом Закона Республики Казахстан «О персональных данных и их защите».</p>
+
+  <h2>1. Кто обрабатывает данные</h2>
+  <p>Оператор персональных данных: <span id="p-legal"></span>, БИН <span id="p-bin"></span>. Адрес: <span id="p-address"></span>. Телефон: <span id="p-phone"></span>.</p>
+
+  <h2>2. Какие данные мы получаем</h2>
+  <p>Через формы на сайте мы получаем то, что вы вводите сами: имя, номер телефона, удобный день и время, тему обращения, выбранного врача и список услуг, которые вы отметили в расчёте.</p>
+  <p>Просим не указывать в форме паспортные данные и подробности диагноза. Необходимые сведения врач уточнит на приёме.</p>
+
+  <h2>3. Для чего мы используем данные</h2>
+  <ul>
+    <li>чтобы связаться с вами и подтвердить запись или обратный звонок;</li>
+    <li>чтобы подготовить приём и ответить на ваши вопросы;</li>
+    <li>чтобы улучшать работу сайта (если на сайте включена статистика посещений).</li>
+  </ul>
+
+  <h2>4. Как мы передаём заявки</h2>
+  <p>Заявка может отправляться в мессенджер администратора (WhatsApp или Telegram) или на сервер клиники. При отправке через мессенджер сообщение обрабатывается также сервисом этого мессенджера по его правилам.</p>
+
+  <h2>5. Статистика и внешние сервисы</h2>
+  <p>Сайт загружает шрифты с сервиса Google Fonts. Если на сайте подключена Яндекс Метрика, она собирает обезличенные данные о посещениях страниц и использует файлы cookie. Вы можете отключить cookie в настройках браузера.</p>
+
+  <h2>6. Срок хранения и защита</h2>
+  <p>Мы храним заявки только столько, сколько нужно для обработки обращения, и не передаём их третьим лицам, кроме случаев, предусмотренных законом. Доступ к данным имеют только сотрудники клиники, которым это нужно для работы.</p>
+
+  <h2>7. Ваши права</h2>
+  <p>Вы можете попросить показать, исправить или удалить ваши данные, а также отозвать согласие на их обработку. Для этого позвоните нам или напишите по контактам выше.</p>
+
+  <h2>8. Изменения</h2>
+  <p>Мы можем обновлять эту политику. Актуальная версия всегда находится на этой странице.</p>
+
+  <a class="back" href="index.html">Вернуться на главную</a>
+</main>
+
+<script src="js/data.js"></script>
+<script>
+  (function () {
+    function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
+    set("p-brand", SITE_DATA.brand);
+    set("p-legal", SITE_DATA.legalName);
+    set("p-bin", SITE_DATA.bin);
+    set("p-address", SITE_DATA.address + ", " + SITE_DATA.district);
+    set("p-phone", SITE_DATA.phoneDisplay);
+    // плашку-предупреждение показываем, пока включён демо-режим
+    if (CONFIG.demo) document.getElementById("p-draft").hidden = false;
+  })();
+</script>
+</body>
+</html>

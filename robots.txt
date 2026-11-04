@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Замени адрес на реальный после публикации
+Sitemap: https://example.com/sitemap.xml

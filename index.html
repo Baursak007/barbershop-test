@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стоматология «Жемчуг» в Астане: запись на приём, цены</title>
+  <meta name="description" content="Частная стоматология в Астане. Осмотр, снимок и письменный план лечения до начала работы. Цены, врачи, онлайн-запись.">
+  <meta property="og:title" content="Стоматология «Жемчуг» в Астане">
+  <meta property="og:description" content="Осмотр, план лечения и смета до начала работы. Запись онлайн.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="theme-color" content="#10302f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">К содержанию</a>
+
+<div class="demo-banner" id="demo-banner" hidden>
+  Демо-версия: названия, цены, телефоны и врачи на сайте являются заглушками.
+</div>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="На главную">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M32 12c-5-4-18-4-18 10 0 7 3 10 4 17 1 7 2 13 6 13s4-9 8-9 4 9 8 9 5-6 6-13c1-7 4-10 4-17C50 8 37 8 32 12z"/></svg>
+      <span class="logo-name" data-bind="brand">Жемчуг</span>
+    </a>
+    <a class="header-phone" id="header-phone" href="#">—</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#doctors" data-needs="doctors">Врачи</a>
+      <a href="#visit">Первый визит</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+      <button class="btn btn-primary btn-small" type="button" data-book="visit">Записаться</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker" data-bind="tagline"></p>
+        <h1 data-bind="heroTitle"></h1>
+        <p class="hero-text" data-bind="heroText"></p>
+
+        <h2 class="concern-title" id="concern-title">Что вас беспокоит?</h2>
+        <div class="concern-grid" id="concern-grid" role="group" aria-labelledby="concern-title"></div>
+        <p class="hero-or">Не нашли свой случай? <button class="link-btn" type="button" data-book="callback">Закажите звонок</button>, администратор подскажет.</p>
+      </div>
+
+      <aside class="hero-card" aria-label="Коротко о клинике">
+        <p class="status" id="status"><span class="status-dot" aria-hidden="true"></span><span id="status-text"></span></p>
+        <p class="hero-card-line" id="hero-address"></p>
+        <p class="hero-card-line" id="hero-hours"></p>
+        <a class="hero-card-phone" id="hero-phone" href="#"></a>
+        <button class="btn btn-primary btn-block" type="button" data-book="visit">Записаться на приём</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="trust" aria-label="Почему нам доверяют">
+    <div class="wrap">
+      <ul class="trust-list" id="trust-list"></ul>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <h2>Услуги</h2>
+      <p class="section-lead">Выберите направление: покажем цены или запишем на осмотр. Если не знаете, что нужно, начните с осмотра и снимка.</p>
+      <div class="service-grid" id="service-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="visit">
+    <div class="wrap">
+      <h2 id="visit-title"></h2>
+      <ol class="steps" id="steps"></ol>
+      <button class="btn btn-light" type="button" data-book="visit">Записаться на осмотр</button>
+    </div>
+  </section>
+
+  <section class="section" id="doctors" data-section="doctors">
+    <div class="wrap">
+      <h2 id="doctors-title"></h2>
+      <div class="doctor-grid" id="doctor-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="safety">
+    <div class="wrap">
+      <h2 id="safety-title"></h2>
+      <div class="safety-grid" id="safety-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="prices">
+    <div class="wrap">
+      <h2>Цены</h2>
+      <p class="section-lead">Все цены указаны «от». Итоговую стоимость называет врач после осмотра и снимка. Отметьте услуги, чтобы увидеть примерную сумму.</p>
+      <div class="chips" id="price-chips" role="group" aria-label="Направление услуг"></div>
+      <div class="price-layout">
+        <div class="price-list" id="price-list"></div>
+        <aside class="calc" id="calc" aria-live="polite"></aside>
+      </div>
+
+      <div class="pay" id="pay">
+        <h3 id="pay-title"></h3>
+        <ul class="pay-list" id="pay-list"></ul>
+        <p class="pay-note" id="pay-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="reviews">
+    <div class="wrap">
+      <h2 id="reviews-title"></h2>
+      <p class="section-lead" id="reviews-text"></p>
+      <div class="review-grid" id="review-grid"></div>
+      <p class="reviews-link"><a id="reviews-link" href="#" target="_blank" rel="noopener">Читать отзывы на 2ГИС</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap faq-wrap">
+      <h2 id="faq-title"></h2>
+      <div class="faq" id="faq-list"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="contacts">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Как нас найти</h2>
+        <address class="contact-address" id="contact-address"></address>
+        <details class="entrance">
+          <summary>Как найти вход</summary>
+          <p id="entrance-text"></p>
+        </details>
+        <p class="contact-line" id="contact-hours"></p>
+        <p class="contact-links">
+          <a id="contact-phone" href="#"></a>
+          <a id="contact-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a id="contact-ig" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a id="contact-map" href="#" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+        </p>
+        <button class="btn btn-ghost btn-small" type="button" id="copy-address">Скопировать адрес</button>
+        <span class="copy-note" id="copy-note" role="status"></span>
+      </div>
+      <div class="contact-cta">
+        <h3>Запишитесь на осмотр</h3>
+        <p>Осмотр, снимок и письменный план лечения. Администратор подтвердит запись по телефону.</p>
+        <button class="btn btn-light" type="button" data-book="visit">Записаться</button>
+        <button class="btn btn-ghost" type="button" data-book="callback">Перезвоните мне</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand" data-bind="brandFull"></p>
+      <p class="footer-text" data-bind="footerText"></p>
+    </div>
+    <p class="footer-links"><a href="privacy.html">Политика конфиденциальности</a></p>
+    <p class="footer-legal" id="footer-legal"></p>
+    <p class="footer-disclaimer" id="footer-disclaimer"></p>
+    <p class="footer-copy">© <span id="year"></span> <span data-bind="brandFull"></span></p>
+  </div>
+</footer>
+
+<noscript>
+  <p class="noscript">Для работы сайта нужен JavaScript. Позвоните нам или напишите в WhatsApp, и мы запишем вас на приём.</p>
+</noscript>
+
+<nav class="mobile-bar" id="mobile-bar" aria-label="Быстрые действия">
+  <a class="mb-call" id="mb-call" href="#">Позвонить</a>
+  <a class="mb-wa" id="mb-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="mb-book" type="button" data-book="visit">Записаться</button>
+</nav>
+
+<dialog class="modal" id="booking" aria-labelledby="booking-title" data-mode="visit">
+  <div class="modal-body">
+    <div class="modal-head">
+      <h2 id="booking-title">Запись на приём</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть" data-close>×</button>
+    </div>
+
+    <form class="modal-form" id="booking-form" novalidate>
+      <label class="field">
+        <span>Имя</span>
+        <input type="text" name="name" autocomplete="given-name" required>
+        <small class="error" data-error="name"></small>
+      </label>
+
+      <label class="field">
+        <span>Телефон</span>
+        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 7XX XXX XX XX" required>
+        <small class="error" data-error="phone"></small>
+      </label>
+
+      <label class="field" data-only="visit">
+        <span>Что вас беспокоит</span>
+        <select name="concern" id="booking-concern"></select>
+      </label>
+
+      <div class="plan-note" id="plan-note" data-only="visit" hidden></div>
+
+      <label class="field" data-only="visit">
+        <span>Врач</span>
+        <select name="doctor" id="booking-doctor"></select>
+      </label>
+
+      <div class="field-row" data-only="visit">
+        <label class="field">
+          <span>Удобный день</span>
+          <input type="date" name="date" id="booking-date">
+        </label>
+        <label class="field">
+          <span>Время</span>
+          <select name="time" id="booking-time"></select>
+        </label>
+      </div>
+
+      <label class="field" data-only="visit">
+        <span>Вы у нас</span>
+        <select name="visitType" id="booking-visit"></select>
+      </label>
+
+      <div class="hp" aria-hidden="true">
+        <label>Не заполняйте это поле <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" name="consent" required>
+        <span>Я согласен(на) на обработку моих персональных данных согласно <a href="privacy.html" target="_blank" rel="noopener">политике конфиденциальности</a>.</span>
+      </label>
+      <small class="error" data-error="consent"></small>
+
+      <button class="btn btn-primary btn-block" type="submit" id="booking-submit">Отправить заявку</button>
+      <p class="modal-note">Не указывайте здесь паспортные данные и подробности диагноза. Их мы уточним на приёме.</p>
+    </form>
+
+    <div class="modal-done" id="booking-done" hidden>
+      <h3 id="done-title"></h3>
+      <p id="done-text"></p>
+      <a class="btn btn-primary btn-block" id="done-link" href="#" target="_blank" rel="noopener" hidden>Открыть чат</a>
+      <a class="btn btn-ghost-dark btn-block" id="done-call" href="#">Позвонить в клинику</a>
+      <button class="btn btn-quiet btn-block" type="button" data-close>Закрыть</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
